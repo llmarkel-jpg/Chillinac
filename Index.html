@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chillin AC — Coming Soon</title>
+<style>
+  :root {
+    --sky: #eaf4f6;
+    --deep: #0e3b4d;
+    --accent: #2fa4b9;
+    --warm: #f4a259;
+    --text: #103447;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(180deg, var(--sky) 0%, #ffffff 60%);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .card {
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--deep);
+    margin-bottom: 28px;
+  }
+
+  .mark svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--sky);
+    stroke-width: 1.6;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--deep);
+    margin-bottom: 8px;
+  }
+
+  h1 span {
+    color: var(--accent);
+  }
+
+  p.tagline {
+    font-size: 1.05rem;
+    color: var(--text);
+    opacity: 0.7;
+    margin-bottom: 36px;
+  }
+
+  .status {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--deep);
+    background: #ffffff;
+    border: 1px solid rgba(14, 59, 77, 0.15);
+    border-radius: 999px;
+    padding: 10px 24px;
+  }
+
+  .status::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--warm);
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  footer {
+    margin-top: 48px;
+    font-size: 0.85rem;
+    color: var(--text);
+    opacity: 0.5;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .mark svg path {
+      animation: drift 4s ease-in-out infinite;
+    }
+    @keyframes drift {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-2px); }
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2v6M12 16v6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M16 12h6M4.93 19.07l4.24-4.24M14.83 9.17l4.24-4.24"/>
+      </svg>
+    </div>
+    <h1>Chillin<span>AC</span></h1>
+    <p class="tagline">Bradenton, Florida</p>
+    <div class="status">Coming Soon</div>
+    <footer>&copy; 2026 Chillin AC. All rights reserved.</footer>
+  </div>
+</body>
+</html>
